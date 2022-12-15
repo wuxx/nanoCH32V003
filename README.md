@@ -50,7 +50,7 @@ Note: The compiled binary file is located in the obj directory of the factory, s
 download WCH-LinkUtility at [WCH Official Website](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html)
 
 ### WCH-LinkUtility Config
-![ISP-2](https://github.com/wuxx/nanoCH32V003/blob/master/doc/ISP-2.png)
+![ISP-1](https://github.com/wuxx/nanoCH32V003/blob/master/doc/ISP-1.png)
 
 The chip series select RISC-V, the chip model select CH32V003, click Target -> Connect WCH-Link, Then select the bin or hex file to be programmed, and click Target -> Program to program the firmware.
 
