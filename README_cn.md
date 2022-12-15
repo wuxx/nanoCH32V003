@@ -11,7 +11,7 @@ nanoCH32V003
 
 
 # nanoCH32V003介绍
-nanoCH32V003 是MuseLab基于沁恒CH32V003C8T6芯片推出的开发板，板载双TYPE-C USB接口，LCD接口，SD卡接口，可通过USB口下载烧录，方便客户进行快速的原型验证及开发。
+nanoCH32V003 是MuseLab基于沁恒CH32V003F4U6芯片推出的开发板，板载24M晶振，引出所有IO口，TYPE-C USB供电，方便客户进行快速的原型验证及开发。
 
 ![3](https://github.com/wuxx/nanoCH32V003/blob/master/doc/3.jpg)
 ![4](https://github.com/wuxx/nanoCH32V003/blob/master/doc/4.jpg)
@@ -19,14 +19,15 @@ nanoCH32V003 是MuseLab基于沁恒CH32V003C8T6芯片推出的开发板，板载
 
 
 # 特性
-- 双USB接口，其中USB1支持Device，USB2支持Host/Device
-- 可直接通过USB下载，无需额外下载器
-- 板载8MHz与32.768K晶振
-- 引出FPC-12P排线接口，可支持常见LCD （如ili9341、st7789等）
-- 引出SD卡座，支持SD卡读写（SPI协议）
+- 板载24MHz
+- 板载复位按键
+- LED指示灯
+- TYPE-C USB供电
+- 所有IO口引出
+- SWDIO单线下载调试
 
 # 芯片资源
-![CH32V003C8T6](https://github.com/wuxx/nanoCH32V003/blob/master/doc/CH32V003C8T6.png)
+![CH32V003C8T6](https://github.com/wuxx/nanoCH32V003/blob/master/doc/CH32V003F4U6.png)
 
 # 使用教程
 ## MounRiver Studio IDE
@@ -44,18 +45,17 @@ nanoCH32V003 是MuseLab基于沁恒CH32V003C8T6芯片推出的开发板，板载
 
 
 ## 烧录
-若使用沁恒官方的下载器WCHLink，则点击 Flash -> Download 即可完成烧录，若使用自带的USB口进行烧录，则操作说明如下
+需要使用沁恒官方的下载器WCH-LinkE，点击 Flash -> Download 即可完成烧录，也可使用WCH提供的烧录软件WCH-LinkUtility，操作说明如下
 注：编译生成的二进制文件位于工厂的obj目录下，如EVT\EXAM\GPIO\GPIO_Toggle\obj\GPIO_Toggle.hex
 
-### WCHISPTool 下载
-可在[沁恒官网](https://www.wch.cn/downloads/WCHISPTool_Setup_exe.html)下载WCHISPTool工具
+### WCH-LinkUtility 下载
+可在[沁恒官网](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html)下载WCH-LinkUtility工具
 
-### WCHISPTool 配置
+### WCH-LinkUtility 配置
 ![ISP-1](https://github.com/wuxx/nanoCH32V003/blob/master/doc/ISP-1.png)
 
-芯片系列选择CH32Vx系列，芯片型号选择CH32V003，下载方式选择USB。
-持续按住开发板上的BOOT按键，然后按下RST按键并松开，最后再松开BOOT按键，令芯片进入bootloader，若成功进入bootloader，则在ISP工具中的USB设备列表中可检测到目标芯片。
-然后在下方选择需要烧录的bin或者hex文件，点击下载即可烧录固件。
+WCH-LinkE和开发板连接3根线，GND, SWDIO, 3V3，MCU Core选择RISC-V系列，芯片型号选择CH32V003，点击 Target -> Connect WCH-Link，
+然后在下方选择需要烧录的bin或者hex文件，再点击Target -> Program即可完成烧录。
 
 ## 开源工具链开发
 ### 工具链下载
@@ -73,23 +73,7 @@ $make
 ```
 
 ### 烧录
-可使用开源的下载工具wchisp进行烧录，具体操作如下
-wchisp是rust编写的工具，首先更新rustc
-```
-$rustc -V
-$rustup update
-```
-
-安装wchisp
-```
-$cargo install wchisp --git https://github.com/ch32-rs/wchisp
-```
-
-按住开发板上的BOOT按键，然后按下RST按键并松开，最后再松开BOOT按键，令芯片进入bootloader，然后即可调用wchisp进行烧录
-```
-$sudo /home/pi/.cargo/bin/wchisp info
-$sudo /home/pi/.cargo/bin/wchisp flash ./build/app.bin
-```
+通过openocd烧录 TODO.
 
 # 产品链接
 [nanoCH32V003 Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.6f55773dXd3CDz&id=689934001629)
