@@ -13,9 +13,8 @@ nanoCH32V003
 # Introduce
 nanoCH32V003 is a development board made by MuseLab based on WCH CH32V003F4U6.
 
-![3](https://github.com/wuxx/nanoCH32V003/blob/master/doc/3.jpg)
-![4](https://github.com/wuxx/nanoCH32V003/blob/master/doc/4.jpg)
-![5](https://github.com/wuxx/nanoCH32V003/blob/master/doc/5.jpg)
+![1](https://github.com/wuxx/nanoCH32V003/blob/master/doc/1.jpg)
+![2](https://github.com/wuxx/nanoCH32V003/blob/master/doc/2.jpg)
 
 # Feature
 - on-board 24MHz Crystal oscillator

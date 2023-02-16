@@ -13,13 +13,12 @@ nanoCH32V003
 # nanoCH32V003介绍
 nanoCH32V003 是MuseLab基于沁恒CH32V003F4U6芯片推出的开发板，板载24M晶振，引出所有IO口，TYPE-C USB供电，方便客户进行快速的原型验证及开发。
 
-![3](https://github.com/wuxx/nanoCH32V003/blob/master/doc/3.jpg)
-![4](https://github.com/wuxx/nanoCH32V003/blob/master/doc/4.jpg)
-![5](https://github.com/wuxx/nanoCH32V003/blob/master/doc/5.jpg)
+![1](https://github.com/wuxx/nanoCH32V003/blob/master/doc/1.jpg)
+![2](https://github.com/wuxx/nanoCH32V003/blob/master/doc/2.jpg)
 
 
 # 特性
-- 板载24MHz
+- 板载24MHz晶振
 - 板载复位按键
 - LED指示灯
 - TYPE-C USB供电
