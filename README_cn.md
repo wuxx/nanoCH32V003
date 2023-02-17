@@ -72,10 +72,10 @@ $make
 ```
 
 ### 烧录
-通过openocd烧录 TODO.
+通过WCH-LinkUtility.exe烧录
 
 # 产品链接
-[nanoCH32V003 Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.6f55773dXd3CDz&id=689934001629)
+[nanoCH32V003 Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.1ad3773dh8K6eP&id=702336916156)
 
 # 参考
 ### WCH

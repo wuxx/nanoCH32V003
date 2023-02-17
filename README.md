@@ -21,7 +21,7 @@ nanoCH32V003 is a development board made by MuseLab based on WCH CH32V003F4U6.
 - Reset Button
 - LED
 - Power by TYPE-C USB
-- Download with WCH-LinkE(one line protocol SWDIO)
+- Download with WCH-LinkE(1-wire serial debug interface)
 
 # Chip Resources
 ![CH32V003F4U6](https://github.com/wuxx/nanoCH32V003/blob/master/doc/CH32V003F4U6.png)
@@ -69,11 +69,10 @@ $make
 ```
 
 ### Program
-use openocd, TODO
+#TODO
 
 # Product Link
-[Aliexpress](https://www.aliexpress.com/item/1005004908206775.html?spm=5261.ProductManageOnline.0.0.6b234edfStGkJN  
-)  
+[Aliexpress](https://www.aliexpress.com/item/1005005221751705.html?spm=5261.ProductManageOnline.0.0.10334edffmDOlC)  
 [Tindie](https://www.tindie.com/products/johnnywu/nanoch32v003-development-board/)
 
 # Reference
