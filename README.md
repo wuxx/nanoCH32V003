@@ -78,3 +78,7 @@ $make
 # Reference
 ### WCH
 https://www.wch.cn/
+### openocd for ch32v003
+https://github.com/karlp/openocd-hacks/
+### makefile for ch32v003evt (WCH's official examples)
+https://github.com/cjacker/ch32v003evt_gcc_makefile
