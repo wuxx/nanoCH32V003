@@ -69,7 +69,21 @@ $make
 ```
 
 ### Program
-#TODO
+#### build Openocd 
+```
+$git clone https://github.com/karlp/openocd-hacks
+$cd openocd-hacks
+$./bootstrap
+$./configure --disable-werror
+$make
+$make install (can skip this step if other version of openocd is already installed)
+```
+#### Program With WCHLink-E
+use a simple script `wlink_write.sh` to program, you may need to edit the path of openocd in script
+```
+$cd tools
+$./wlink_write.sh ../demo/blink_1000.bin
+```
 
 # Product Link
 [Aliexpress](https://www.aliexpress.com/item/1005005221751705.html?spm=5261.ProductManageOnline.0.0.10334edffmDOlC)  

@@ -72,7 +72,22 @@ $make
 ```
 
 ### 烧录
-通过WCH-LinkUtility.exe烧录
+#### Openocd 安装
+```
+$git clone https://github.com/karlp/openocd-hacks
+$cd openocd-hacks
+$./bootstrap
+$./configure --disable-werror
+$make
+$make install (如果系统已经安装其他版本的Openocd，此步可跳过)
+```
+
+#### 编程
+使用封装好的简单脚本`wlink_write.sh` 进行烧录，可能需要手动编辑脚本中的openocd路径
+```
+$cd tools
+$./wlink_write.sh ../demo/blink_1000.bin
+```
 
 # 产品链接
 [nanoCH32V003 Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.1ad3773dh8K6eP&id=702336916156)
@@ -80,3 +95,5 @@ $make
 # 参考
 ### WCH
 https://www.wch.cn/
+### Openocd
+https://github.com/karlp/openocd-hacks/
