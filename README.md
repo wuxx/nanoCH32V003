@@ -12,7 +12,7 @@ nanoCH32V003
 
 # Introduce
 nanoCH32V003 is a development board made by MuseLab based on WCH CH32V003F4U6.
-
+(note: The chip packages of CH32V002F4U6 and CH32V004F6U1 are exactly the same as CH32V003F4U6, so they can share the same PCB.)
 ![1](https://github.com/wuxx/nanoCH32V003/blob/master/doc/1.jpg)
 ![2](https://github.com/wuxx/nanoCH32V003/blob/master/doc/2.jpg)
 
